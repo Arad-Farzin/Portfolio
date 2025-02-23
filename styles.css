@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+body {
+    background: linear-gradient(135deg, #000000 20%,#231a1a 30%, #5b0b0b 50%, #0a0808 80%);
+    font-family: "Montserrat", serif;
+}
+.box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.bubbles {
+    z-index: -100;
+    position: relative;
+    display: flex;
+}
+.bubbles span {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background: #540505;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow:
+    0 0 50px #dab3b3,
+    0 0 100px #d4aaaa;
+    animation: animate 25s linear infinite;
+    animation-duration: calc(200s / var(--i));
+}
+@keyframes animate {
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+.container {
+    margin: auto;
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.nav {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+.btn {
+    background-color: #9d2b55;
+    height: 40px;
+    width: 20%;
+    border-radius: 20%;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(164, 47, 90, 0.5), 0 3px 3px rgba(164, 47, 90, 0.5);
+    transition: transform 0.3s;
+}
+.btn:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+a {
+  display: block;
+  text-decoration: none;
+  height: 40px;
+  padding-top: 11px;
+}
+.details {
+  margin-top: 50px;
+  height: 800px;
+}
+@media (min-width: 475px) {
+    .container, .bio {
+      max-width: 475px;
+    }
+  }
+  @media (min-width: 640px) {
+    .container, .bio {
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container, .bio {
+      max-width: 768px;
+    }
+    .slider {
+      width: 600px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container, .bio {
+      max-width: 1024px;
+    }
+    .slider {
+      width: 700px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container, .bio {
+      max-width: 1280px;
+    }
+    .slider {
+      width: 800px;
+    }
+  }
+  @media (min-width: 1536px) {
+    .container, .bio {
+      max-width: 1536px;
+    }
+    .slider {
+      width: 1000px;
+    }
+  }  
